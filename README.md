@@ -5,6 +5,9 @@
 Each daily challenges including nessecary input will be keep inside a folder.
 `D01` is for challenge from day 1.
 
+You can checkout my YouTube Video for AoC Series:\
+[AoC 2021 YouTube Playlist](https://www.youtube.com/watch?v=Invlu2HLcBA&list=PLMzyOn0orr7zDnq32QlDgo0nAGbU-2K2A)
+
 ## Day 1
 The puzzle is quite simple. You only need to count how many times the given input increases compare to previous input. So basically, You just create a new list that contains booleans. It is true if the current input is greater than previous input.
 
