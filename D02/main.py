@@ -1,3 +1,5 @@
+import os
+
 VERTICAL_COMMAND = {"up": -1, "down": 1}
 
 
@@ -32,7 +34,8 @@ def solution2(l):
 
 
 if __name__ == "__main__":
-    with open("D02/input.txt") as file:
+    dir = os.path.abspath(os.path.dirname(__file__))
+    with open(os.path.join(dir, "input.txt")) as file:
         data = file.read().splitlines()
 
     print(solution1(data))

@@ -1,3 +1,5 @@
+import os
+
 def solution1(l):
     """Count the number of increases from given list m."""
     return [int(l[i]) > int(l[i - 1]) for i in range(1, len(l))].count(True)
@@ -10,8 +12,9 @@ def solution2(l):
 
 
 if __name__ == "__main__":
-    with open("D01/input.txt") as f:
-        _input = f.read().splitlines()
+    dir = os.path.abspath(os.path.dirname(__file__))
+    with open(os.path.join(dir, "input.txt")) as file:
+        _input = file.read().splitlines()
 
     print(solution1(_input))
     print(solution2(_input))
