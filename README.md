@@ -51,7 +51,7 @@ Then we just need to update our list.
     o2_l = [_l for _l in o2_l if (_l >> (n_bit - i)) & 1 == o2_bit] or o2_l
 ```
 
-For `co2` we can do the same but instead greater than length of report, we find if it is lesser tham the report.
+For `co2` we can do the same but instead greater than length of report, we find if it is lesser then the length of report.
 
 ```python
     co2_bit = sum((_l >> (n_bit - i)) & 1 for _l in co2_l) < len(co2_l) / 2
