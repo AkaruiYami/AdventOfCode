@@ -1,4 +1,4 @@
-![AoC2021-AkaruiYami-Youtube-Series](https://scontent.fkul3-2.fna.fbcdn.net/v/t39.30808-6/263090987_198128025857818_3390643286314791789_n.png?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=3gk1fwzU_7gAX9fwoDe&tn=ltBEoBUIPQB7JKmb&_nc_ht=scontent.fkul3-2.fna&oh=633fcbba405e269f2a256fafc51458ff&oe=61B3A0EA)
+![AoC2021-AkaruiYami-Youtube-Series](https://pbs.twimg.com/media/FF7IVQgVQAAL-__?format=jpg&name=small)
 
 # My Attempt in AoC 2021.
 
