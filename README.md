@@ -1,4 +1,4 @@
-![AoC2021-AkaruiYami-Youtube-Series](https://scontent.fkul3-2.fna.fbcdn.net/v/t39.30808-6/263090987_198128025857818_3390643286314791789_n.png?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=3gk1fwzU_7gAX9fwoDe&tn=ltBEoBUIPQB7JKmb&_nc_ht=scontent.fkul3-2.fna&oh=633fcbba405e269f2a256fafc51458ff&oe=61B3A0EA)
+![AoC2021-AkaruiYami-Youtube-Series](./Assets/AOC2021_Banner.png)
 
 # My Attempt in AoC 2021.
 
@@ -105,3 +105,33 @@ For puzzle 2, there is a minor adjustment that we need to make. Instead of addin
 ```
 
 This is because, for diagonal line, the result from `x2-x1` and `y2-y1` will both return exact same result which is double our distance. The previous code can be use for puzzle 1 because one of two axis will return 0. We took the max value because for horizontal line, `x2-x1` will return 0 but `y2-y1` while return some value which will surely be greater than 0. It is the same for vertical line but vise versa.
+
+## Day 6
+
+As for day 6, you need firt to prepare a dictionary that hold `timer: n_fish` where the `timer` is the input that were given for the puzzle, and `n_fish` is the number of timer in side the input. This is to make it easier for us to loop through the fishes.
+
+```python
+def update_fish(fishes):
+    new_fish_lib = defaultdict(int)
+    for timer, n_fish in fishes.items():
+        if timer == 0:
+            timer = 7
+            new_fish_lib[8] += n_fish
+        new_fish_lib[timer - 1] += n_fish
+    return new_fish_lib
+```
+
+The function above will then create a new dictionary with updated information about our fishes. For today puzzle, the solution is much more simple since both task require you to do the same thing. You just need to give the number of days as specify by the puzzle into the function below.
+
+```python
+
+def solution(fishes, days):
+    fish_lib = fishes.copy()
+    for _ in range(days):
+        fish_lib = update_fish(fish_lib)
+
+    return sum(fish_lib.values())
+
+```
+
+The function above create a copy of fishes library since we are going to update the library to avoid changes to the original. Then it will update that library for `n=days` times. Lastly it will return the sum of the values from the last updated fishes library.
