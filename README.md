@@ -8,6 +8,21 @@ Each daily challenges including nessecary input will be keep inside a folder.
 You can checkout my YouTube Video for AoC Series:\
 [AoC 2021 YouTube Playlist](https://www.youtube.com/watch?v=Invlu2HLcBA&list=PLMzyOn0orr7zDnq32QlDgo0nAGbU-2K2A)
 
+---
+
+## Table of Content:
+
+- [Day 1](#day-1)
+- [Day 2](#day-2)
+- [Day 3](#day-3)
+- [Day 4](#day-4)
+- [Day 5](#day-5)
+- [Day 6](#day-6)
+- [Day 7](#day-7)
+- [Day 8](#day-8)
+
+---
+
 ## Day 1
 
 The puzzle is quite simple. You only need to count how many times the given input increases compare to previous input. So basically, You just create a new list that contains booleans. It is true if the current input is greater than previous input.
