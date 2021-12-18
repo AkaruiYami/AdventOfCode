@@ -174,7 +174,7 @@ Now, the tricky part is to understand on how to identify each unknown signal. Af
 2. 5-Segments Signal [2, 3, 5]
 3. 6-Segments Signal [0, 6, 9]
 
-We can take advantage on our set but looking for leftover connection between `signals of 8` and `the unknown signal`. Below we can the process on how to identify the unknown signal.
+We can take advantage on our set by looking for leftover connection between `signals of 8` and `the unknown signal`. Below we can see the process on how to identify the unknown signal.
 
 To I dentify signal 3.
 
@@ -221,4 +221,14 @@ for unknown_signal in unknown_signals:
 
 ```
 
-The piece of code above do just that. It trying to identify the signal by using the method above.
+The piece of code above do just that. We know that we can identify all of these unknown signal by looking if the leftover segment is a subset of certain signal. Therefore, we will loop through all of this unknown signal and check if that signal fulfill certain criteria. The criteria that we are looking is as below:
+
+If `len(leftover) == 1`\
+`signal 6` = `leftover` $\subset $ `signal 1`\
+`signal 0` = `leftover` $\subset $ `signal 4`
+
+If `len(leftover) == 2`\
+`signal 2` = `leftover` $\subset $ `signal 4`\
+`signal 3` = `leftover` $\subset $ (`signal 8` - `signal 1`)
+
+For signal 9, we know that it is from group `6-Segments Signal` and we already able to identify the other 2 from the same group. So if all the check fail, we can say that that unknonw 6-Segments Signal is actual a 9. The same to 5.
