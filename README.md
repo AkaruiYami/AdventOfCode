@@ -20,6 +20,7 @@ You can checkout my YouTube Video for AoC Series:\
 - [Day 6](#day-6)
 - [Day 7](#day-7)
 - [Day 8](#day-8)
+- [Day 9](#day-9)
 
 ---
 
@@ -223,12 +224,12 @@ for unknown_signal in unknown_signals:
 
 The piece of code above do just that. We know that we can identify all of these unknown signal by looking if the leftover segment is a subset of certain signal. Therefore, we will loop through all of this unknown signal and check if that signal fulfill certain criteria. The criteria that we are looking is as below:
 
-If `len(leftover) == 1`\
-`signal 6` = `leftover` $\subset $ `signal 1`\
-`signal 0` = `leftover` $\subset $ `signal 4`
-
-If `len(leftover) == 2`\
-`signal 2` = `leftover` $\subset $ `signal 4`\
-`signal 3` = `leftover` $\subset $ (`signal 8` - `signal 1`)
+![signal-criteria](./Assets/D08/subset.png)
 
 For signal 9, we know that it is from group `6-Segments Signal` and we already able to identify the other 2 from the same group. So if all the check fail, we can say that that unknonw 6-Segments Signal is actual a 9. The same to 5.
+
+## Day 9
+
+For Puzzle 1, the task ask us to find the total risk level but adding 1 to the low point's height. Therefore, first we need to find these low points. As mention in the task given, low point is a point where it is lower that its adjacents. So first we loop through the heightmap, and check of the adjacents of the current point is lower than its adjacents, if it is, we then add it to our `total_risk`.
+
+For Puzzle 2, we just need to expand our low points until it reach the `boundary` of the basin. The boundary is a point which the height of 9 and point outside the heightmap. From the low point, we check if the adjacent is a valid basin area. If it is, we then add that point into the `edge_points` list so we can come back to that point and check its adjacents. After we done checking for all adjacents for out current point, we then register this point in a set called `basins_point`. We then continue to check for the next point form our `edge_points` list but if that particular point already exist in `basins_point` we simply skip the process since we already done with that point.
