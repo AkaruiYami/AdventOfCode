@@ -19,6 +19,7 @@ Each daily challenges including nessecary input will be keep inside a folder.
 - [Day 8](./D08/README.md#day-8)
 - [Day 9](./D09/README.md#day-9)
 - [Day 10](./D10/README.md#day-10)
+- [Day 11](./D11/README.md#day-11)
 
 ---
 
