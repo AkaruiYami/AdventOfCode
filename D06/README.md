@@ -1,6 +1,6 @@
 # Day 6
 
-As for day 6, you need firt to prepare a dictionary that hold `timer: n_fish` where the `timer` is the input that were given for the puzzle, and `n_fish` is the number of timer in side the input. This is to make it easier for us to loop through the fishes.
+As for day 6, you need to prepare a dictionary that hold `timer: n_fish` where the `timer` is the input that were given for the puzzle, and `n_fish` is the number of timer inside the input. This is to make it easier for us to loop through the fishes. For this, we are going to use `defaultdict` from collections module.
 
 ```python
 def update_fish(fishes):
@@ -13,7 +13,7 @@ def update_fish(fishes):
     return new_fish_lib
 ```
 
-The function above will then create a new dictionary with updated information about our fishes. For today puzzle, the solution is much more simple since both task require you to do the same thing. You just need to give the number of days as specify by the puzzle into the function below.
+The function above will create a new dictionary with default value of integer that will store informations about our fishes. For today puzzle, the solution is much more simple since both task require you to do the same thing. You just need to give the number of days as specify by the puzzle into the function below.
 
 ```python
 
@@ -26,6 +26,6 @@ def solution(fishes, days):
 
 ```
 
-The function above create a copy of fishes library since we are going to update the library to avoid changes to the original. Then it will update that library for `n=days` times. Lastly it will return the sum of the values from the last updated fishes library.
+The function above create a copy of fishes dictionary to avoid changes to the original dictionary. Then it will update that dictionary for `n=days` times. Lastly it will return the sum of the values from the last updated fishes dictionary.
 
 [<sup>< main page](../README.md#My-Attempt-in-AoC-2021)
